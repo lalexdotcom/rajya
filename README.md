@@ -56,7 +56,7 @@ removeGlobalListener();
 // or store.clearListeners();
 ```
 
-A useStore hook is provided for use with React 18+, returning the state and actions.
+A `useStore` hook is provided for use with React 18+, returning the state and actions.  
 Actions having the same name as a property are overriden (and safely typed in TS).
 
 ```typescript
