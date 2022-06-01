@@ -1,0 +1,30 @@
+{
+  "name": "rajya",
+  "version": "1.0.0-beta.1",
+  "description": "Minimalistic state management",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "test-react": "parcel test/react.html",
+    "test-vanilla": "ts-node test/vanilla.ts"
+  },
+  "keywords": [],
+  "author": "LAlex <lalex@lalex.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "16",
+    "@types/react": "^18.0.10",
+    "@types/react-dom": "^18.0.5",
+    "parcel": "^2.6.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  },
+  "alias": {
+    "process": false
+  },
+  "peerDependencies": {
+    "react": "^18.1.0"
+  }
+}
