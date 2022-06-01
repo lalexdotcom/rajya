@@ -3,7 +3,7 @@
 Minimalistic state management for React and vanillaJS
 
 ```typescript
-import createStore from "rajya";
+import { createStore } from "rajya";
 
 // Parameters are the initial state value
 // and actions initializer.
