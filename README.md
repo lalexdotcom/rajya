@@ -108,7 +108,7 @@ A FullStore utility type is provided allowing to use untracked properties.
 
 ```typescript
 import { createRoot } from "react-dom/client";
-import { createStore, useStore, FullStore } from "../src";
+import { createStore, useStore, FullStore } from "rajya";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
