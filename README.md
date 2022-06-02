@@ -1,5 +1,7 @@
 # rajya
 
+> :warning: This package is a way for the author to experiment Opensource projects and NPM package publishing... and I hope be useful to the community!
+
 Minimalistic state management for React and vanillaJS
 
 ```typescript
