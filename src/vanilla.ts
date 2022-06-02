@@ -121,9 +121,9 @@ export function createStore<TState extends State, TActions extends Actions>(
   const store = {
     setState,
     getState,
+    getActions,
     addListener,
     clearListeners,
-    getActions,
   };
 
   return store;
