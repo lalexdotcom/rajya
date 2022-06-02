@@ -28,6 +28,6 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm run build
-      - run: pnpm -r publish --access public --dry-run --no-git-checks
+      - run: pnpm -r publish --access public --dry-run
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
