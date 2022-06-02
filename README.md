@@ -1,8 +1,27 @@
 # rajya
 
-> :warning: This package is a way for the author to experiment Opensource projects and NPM package publishing... and I hope be useful to the community!
-
 Minimalistic state management for React and vanillaJS
+
+> :warning: This package is a way for the me to experiment Opensource projects and NPM package publishing...  
+> Anymawy, this way of handling global state is provinding me the personal DX experience I was waiting for (easy render optimisation in React, native propertiy change listeners, type safety without too much code, ...). Let's hope be useful to the community!
+
+> You may notice this library is very simimar to [zustand](https://github.com/pmndrs/zustand). Actually, it's heavily inspired from it.
+> Actually I'm a huge fan of @dai-shi work on [zustand](https://github.com/pmndrs/zustand) and [valtio](https://github.com/pmndrs/valtio) :pray:
+
+## Install
+Use any package manager
+```shell
+# NPM
+npm install rajya
+
+# YARN
+yarn add rajya
+
+# PNPM
+pnpm add rajya
+```
+
+## Use
 
 ```typescript
 import { createStore } from "rajya";
@@ -128,7 +147,7 @@ const o = { a: 1, b: 2 };
 
 const App = () => {
   const { foo, updateFoo, updateBar } = useStore(store, ["foo"]);
-  {/* const { bar } = useStore(store, ["foo"]) as FullStore<typeof store> */}
+  {/* const { foo, bar, updateFoo, updateBar } = useStore(store, ["foo"]) as FullStore<typeof store> */}
   return (
     <>
       <h1>Rajya test</h1>
