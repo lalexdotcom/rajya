@@ -4,7 +4,9 @@
 name: Node.js Package
 
 on:
-  push
+  push:
+    branches:    
+      - 'releases/**'
 
 jobs:
   build:
@@ -26,6 +28,6 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm run build
-      - run: pnpm -r publish --dry-run
+      - run: pnpm -r publish --access public --dry-run
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
