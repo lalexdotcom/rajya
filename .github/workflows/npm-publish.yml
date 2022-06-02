@@ -9,14 +9,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 16
+      PNPM_VERSION: 7
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2.0.1
+      - name: Setup PNPM $PNPM_VERSION
+        uses: pnpm/action-setup@v2.0.1
         with:
-          version: 7
-      - uses: actions/setup-node@v3
+          version: $PNPM_VERSION
+      - name: Use NodeJS $NODE_VERSION
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: $NODE_VERSION
           registry-url: https://registry.npmjs.org/
           cache: 'pnpm'
       - run: pnpm install
