@@ -97,11 +97,11 @@ const Test = () => {
 			<div>{Math.random()}</div>
 			// Will re-render
 			<button onClick={() => store.setState({ foo: foo + 1 })}>Update foo</button>
-			// Won't re-render as 'bar' isn't read from the hook but from the store
+			// Will not re-render as 'bar' isn't read from the hook but from the store
 			<button onClick={() => store.setState((old) => ({ ...old, bar: old.bar + "-" }))}>Update bar</button>
 			// Will re-render
 			<button onClick={() => incFoo()}>Inc foo</button>
-			// Won't re-render
+			// Will not re-render
 			<button onClick={() => incBar()}>Inc bar</button>
 		</div>
 	);
