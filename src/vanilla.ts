@@ -19,7 +19,7 @@ type StateListener<TState extends State> = (state: TState, previousState: TState
 export type Store<TState extends State, TActions extends Actions = {}> = {
 	setState: SetState<TState>;
 	getState: GetState<TState>;
-	getActions: () => TActions;
+	getActions: () => Readonly<TActions>;
 	addListener: (listener: StateListener<TState>, keys?: (keyof TState)[]) => () => void;
 	clearListeners: () => void;
 };
@@ -90,7 +90,7 @@ export function createStore<TState extends State, TActions extends Actions>(
 		listeners.clear();
 	};
 
-	const actions = initActions?.(getState, setState) ?? {};
+	const actions = Object.freeze(initActions?.(getState, setState) ?? {});
 
 	return {
 		setState,
